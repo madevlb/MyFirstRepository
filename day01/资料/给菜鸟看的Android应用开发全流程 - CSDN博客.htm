@@ -1,0 +1,519 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><script charset="utf-8" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/probe.js" async="" mod_name="tanxssp-probe"></script><script type="text/javascript" charset="utf-8" async="" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yuetu_yuansheng_filter_title.js"></script><script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ex.js" async=""></script><script charset="utf-8" async="" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/tanxssp.js"></script><script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ca-pub-6625678643128649.js"></script><script type="text/javascript" charset="gbk" id="tanx-s-mm_11220363_1101997_26568831" async="" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ex_002.js"></script>
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/hm.js"></script><script type="text/javascript">
+        if (window.location.toString().indexOf("shtml?") > 0) {
+            self.location = window.location.toString().replace(window.location.search.toString(), "");
+        }
+        function doccheckart(json) {
+            if (json[0].result == "1") {
+                self.location = "http://www.360doc.com/noarticle.aspx";
+            }
+        }
+    </script>
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/jquery1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+        if (navigator.userAgent.indexOf("iPhone") > 0 || navigator.userAgent.indexOf("Android") > 0 || navigator.userAgent.indexOf("iPod") > 0) {  //手机端跳转
+            var patt1 = new RegExp("[0-9]*_[0-9]*");
+            var url = patt1.exec(location.href);
+            if (url != "") {
+                self.location = "http://www.360doc.cn/article/" + url + ".html";
+            }
+        }
+    </script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="360doc" name="classification"><link rel="alternate" media="only screen and (max-width: 640px)" href="http://www.360doc.cn/article/11409172_410323193.html"><meta content="androiding,java,google" name="keywords"><meta content="给菜鸟看的Android应用开发全流程 - CSDN博客" name="description"><meta name="mobile-agent" content="format=html5;url=http://www.360doc.cn/article/11409172_410323193.html"><meta content="给菜鸟看的Android应用开发全流程 - CSDN博客。很多菜鸟开始学习Android开发，去网上搜集过很多“Android开发教程”，但是搜索出来的东西，如果不是特别针对性的关键词，基本上内容都是：环境配置-工具安装-第一个Hello Android项目-项目结构、文件作用-布局-控件-……2)  Android SDK.在Eclipse中新建一个Android项目，基本流程是：新建项目，选择Android Project，然后输入package名、应用名和Activity名，选择Android Api版本。" name="360docabstract"><meta content="www.360doc.com" name="author"><title>
+给菜鸟看的Android应用开发全流程 - CSDN博客
+</title>
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/showarticlefollow20160329.js" type="text/javascript" charset="utf-8"></script>
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/jQuery.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?d86954201130d615136257dde062a503";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<link rel="stylesheet" type="text/css" href="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/wzhead-cleaned.css"><link rel="stylesheet" type="text/css" href="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/newArticle20160509.css"><style>#artContent img{max-width:656px;} #artContent h1{font-size:16px;font-weight: 400;}</style>
+<script type="text/javascript" language="javascript">
+        window.onerror = ignoreError;
+        function ignoreError() {
+            return true;
+        }
+    </script>
+<link href="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/newheader.css" rel="stylesheet" type="text/css"><script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/share.js"></script><script type="text/javascript" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/EssayforIE120425.js"></script><link href="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/a" rel="styleSheet" type="text/css"></head>
+<body onmouseup="setDragEnd()" onclick="delAllDiv(event)"><iframe style="width: 0px; height: 0px; display: none;" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/acbeacon2.htm"></iframe>
+<span id="LayerLogin"></span>
+<div style="position: fixed; width: 100%; z-index: 1000;">
+<div class="header" style="background-color: #ffffff;">
+<div class="header_1">
+<a href="http://www.360doc.com/index.html">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/nlogo.jpg" class="f_left"></a>
+<div class="mylibrary">
+<a id="userInfoUrl" href="http://www.360doc.com/login.aspx?reurl=http://www.360doc.com/content/14/0918/01/11409172_410323193.shtml" class="a1">
+<div class="h_user">
+<img id="divuserinfonew" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/dingtu.gif"><span></span>
+</div>
+我的图书馆
+</a>
+<ul class="hm_list hm_account" style="display: none;">
+<li><a href="http://www.360doc.com/myindex.aspx">首页</a></li>
+<li><a href="http://www.360doc.com/myfiles.aspx?app=1&amp;type=3">馆藏</a></li>
+<li><a href="http://www.360doc.com/myreadroom.aspx">阅览室</a></li>
+<li><a href="http://www.360doc.com/mycontacts.aspx">通讯录</a></li>
+<li><a href="javascript:void(0);" onclick="displaylogin();">退出帐号</a></li>
+</ul>
+</div>
+<div class="headmail f_left" style="display: none;">
+<p class="h_icon1" id="newMsg"></p>
+<span class="h_border"></span>
+<ul class="hm_list" id="msgtips">
+<li id="msgicon"><a href="http://www.360doc.com/mymsg.aspx?app=2">查看信箱</a></li>
+<li id="sysmsgicon"><a href="http://www.360doc.com/mymsg.aspx?app=9">系统消息</a></li>
+<li id="sysicon"><a href="http://www.360doc.com/mymsg.aspx?app=4">官方通知</a></li>
+<li class="hm_color2" style="background-color: #f4f4f4"><a href="http://www.360doc.com/mymsg.aspx?app=6">设置</a></li>
+</ul>
+</div>
+<div class="headtalker f_left" style="display: none;">
+<p class="h_icon1" id="newDialog"></p>
+<span class="h_border"></span>
+<ul class="hm_list">
+<li id="li1chat"><a href="javascript:void(0)" onclick="initchatnew()">开始对话</a></li>
+<li id="li2chat" style="display: none;"><a href="javascript:void(0)" style="color: #141414;">有<span>11</span>人和你对话，<span onclick="initchatnew()" style="color: #4578b4">查看</span>&nbsp;<span onclick="clearinfochat()" style="color: #4578b4">忽略</span></a></li>
+<li><a href="http://www.360doc.com/mycontacts.aspx?app=8">历史对话记录</a></li>
+<li class="hm_color2" style="background-color: #f4f4f4"><a href="http://www.360doc.com/mycontacts.aspx?app=7">通知设置</a></li>
+</ul>
+</div>
+<a href="http://www.360doc.com/advice.html" target="_blank" class="head_talk f_right">留言交流</a>
+<div class="headsearch f_right">
+<div class="zcomdiv">
+<input class="headsearch_inp f_left" value="搜文章 找馆友" type="text">
+<span class="headsearch_btn f_right" id="searchlinkid"></span>
+</div>
+<div class="headsearch_select">
+<p class="hs_title">请选择搜索范围</p>
+<a href="javascript:goSearch();" class="cur">含&nbsp;<span></span>&nbsp;的文章</a>
+<a href="javascript:goSearch();">昵称为&nbsp;<span></span>&nbsp;的馆友</a>
+<a href="javascript:goSearch();">兴趣为&nbsp;<span></span>&nbsp;的馆友</a>
+</div>
+</div>
+</div>
+</div>
+<div class="arti_type_shadow" style="display: block;"></div>
+</div>
+<div style="height: 68px; _height: 0px; width: 100%;"></div>
+<div class="clear360doc"></div>
+<div class="doc360article_content" style="width: 1016px;">
+<div style="height: 90px; padding-top: 13px;">
+<script async="" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/adsbygoogle.js"></script><ins class="adsbygoogle" style="display: inline-block; width: 970px; height: 90px" data-ad-client="ca-pub-6625678643128649" data-ad-slot="2709112222" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:970px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;width:970px;height:90px;" height="90" frameborder="0" width="970"></iframe></ins></ins></ins><script> (adsbygoogle = window.adsbygoogle || []).push({ }); </script>
+</div>
+<p class="clearboth"></p>
+<div class="a_left" style="width: 686px;">
+<div id="bgchange" style="width: 660px;">
+<div class="fontsize_bgcolor_controler">
+<div class="a_bgcolor">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/bgcolor.jpg">
+<div class="a_colorlist">
+<span class="a_color1" onclick="artStatistics('20-11-1');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+<span class="a_color2" onclick="artStatistics('20-11-2');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+<span class="a_color3" onclick="artStatistics('20-11-3');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+<span class="a_color4" onclick="artStatistics('20-11-4');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+<span class="a_color5" onclick="artStatistics('20-11-5');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+<span class="a_color6 cur" onclick="artStatistics('20-11-6');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/yes.gif"></span>
+</div>
+</div>
+<div class="a_fontsize">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/fontSize.jpg">
+<div class="fschange">
+<label>
+<input name="font_Size" id="" value="18" onclick="artStatistics('20-10-1');" type="radio">大
+</label>
+&nbsp;
+<label>
+<input name="font_Size" id="" value="16" onclick="artStatistics('20-10-2');" checked="checked" type="radio">中
+</label>
+&nbsp;
+<label>
+<input name="font_Size" id="" value="14" onclick="artStatistics('20-10-3');" type="radio">小
+</label>
+</div>
+</div>
+</div>
+<h2 id="titiletext">给菜鸟看的Android应用开发全流程 - CSDN博客</h2>
+<div class="article_data">
+<div class="article_data_left">
+2014-09-18
+<span class="a_username">&nbsp;<a href="http://www.360doc.com/userhome/11409172" id="savernickname" target="_blank" onclick="artStatistics('20-7-1');" title="netpower1994">netpower1...</a>
+</span>
+<span id="articleinfo">
+<span id="docsource" class="a_from">&nbsp;<a href="http://m.blog.csdn.net/blog/ly_sr/6737353" target="_blank" onclick="artStatistics('20-12');">文章来源</a></span><span id="360doc_Readnum">&nbsp;&nbsp;阅&nbsp;12677&nbsp;</span><span id="360docResaveCount"><span onclick="ShowSaverUser();artStatistics('20-13');" id="360doc_saverNum" style="cursor: pointer;">&nbsp;转&nbsp;<span style="cursor:pointer;" onclick="javascript:ShowSaverUser();">97</span></span>
+<span id="360doc_saverUser"><div id="sameArtOuter" style="display:none;position: absolute; height:305px;width:144px;left:0px;margin-top:15px;z-index:100000;"><div id="sameArt" style=" overflow-y: auto;  height:300px;overflow-x: hidden; z-index: 100;right:0px;margin-top:-10px;" onclick="event.cancelBubble=true;"></div></div></span>
+</span>
+</span>
+</div>
+<div id="resavelayer1" class="bdsharebuttonbox article_data_right bdshare-button-style0-16" data-bd-bind="1499630387624"><div class="zcommond"><a class="p2" href="javascript:void(0);" onclick="SaveArt();artStatistics('20-3-1');">转藏到我的图书馆</a><div class="s2 f_right" onclick="setTimeout(function(){$('.article_data_right .sharelist_new').slideToggle(0);},10);"><span onclick="artStatistics('20-8-2');"></span></div><a class="p1" href="javascript:void(0);" onclick="shareWeixin();artStatistics('20-8-5');">微信</a> <span class="s1" onclick="setTimeout(function(){$('.article_data_right .sharelist_new').slideToggle(0);},10);artStatistics('20-8-1');" onmouseover="this.style.color='#0f659c'" onmouseout="this.style.color=''">分享：</span></div><div class="sharelist_new" id="fenxiangLayer"> <a class="slbg1" href="javascript:void(0);" data-cmd="qzone" onclick="artStatistics('20-8-7');">QQ空间</a> <a class="slbg2" href="javascript:void(0);" data-cmd="sqq" onclick="artStatistics('20-8-9');">QQ好友</a> <a class="slbg3" href="javascript:void(0);" data-cmd="tsina" onclick="artStatistics('20-8-11');">新浪微博</a><a class="slbg5" href="javascript:void(0);" onclick="showdivemail1();artStatistics('20-8-15');">推荐给朋友</a> </div><div style="position: absolute;display:none;z-index:1;left:143px;" id="fuzhitishidiv"></div></div>
+</div>
+<div id="articlecontent" class="article_container" onmousedown="newhighlight = true;" onmouseup="NewHighlight(event);">
+<table>
+<tbody>
+<tr>
+<td id="artContent">
+<div style="width: 656px; margin: 0; padding: 0; height: 0;"></div>
+&nbsp;
+<p style="TEXT-ALIGN: center"><strong><span style="FONT-FAMILY: 黑体; COLOR: #0f9932; FONT-SIZE: 24px">给菜鸟看的</span><span style="FONT-FAMILY: 黑体; COLOR: #0f9932; FONT-SIZE: 24px">Android</span><span style="FONT-FAMILY: 黑体; COLOR: #0f9932; FONT-SIZE: 24px">应用开发全流程</span><span style="FONT-FAMILY: 黑体; COLOR: #0f9932; FONT-SIZE: 20px">——好多Android开发中，没人告诉过你的事</span></strong></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">很多菜鸟开始学习</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发，去网上搜集过很多“</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发教程”，但是搜索出来的东西，如果不是特别针对性的关键词，基本上内容都是：环境配置</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">工具安装</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">第一个</span><span style="FONT-FAMILY: Calibri">Hello Android</span><span style="FONT-FAMILY: 宋体">项目</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">项目结构、文件作用</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">布局</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">控件</span><span style="FONT-FAMILY: Calibri">-</span><span style="FONT-FAMILY: 宋体">……等等涉及具体开发内容的文章，最后打包发布了事；且不说这些文章又有一大半都是互相转载来转载去，单看内容，大部分都是讲具体功能实现手段，或者某个</span><span style="FONT-FAMILY: Calibri">API</span><span style="FONT-FAMILY: 宋体">怎么用，然而<strong><span style="COLOR: #5500ff">很多细节可能虽然确实很简单，却往往令菜鸟迷惑头痛不已</span></strong>……唉，我当年不堪回首的岁月啊！虽然这些问题可能日后看来是小意思，但当初一个菜鸟可能根本不知道这个问题的存在，更不用说用什么词去搜索；所以虽然这些问题可能也是有专门文章讲，但菜鸟们根本不知道这个关键字啊</span><span style="FONT-FAMILY: Calibri">~~~~</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">本人靠着一本书</span><span style="FONT-FAMILY: Calibri">+</span><span style="FONT-FAMILY: 宋体">网上各种搜，现在总算能完成一个完整的</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发流程。回头看看，总结一下这些经验，即给自己加深印象，也帮助后来的菜鸟，也是功德无量啊</span><span style="FONT-FAMILY: 宋体">。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">话说本人半路出家，编程水平实在一般，所以<strong><span style="COLOR: #5500ff">此文重点在流程</span></strong>，至于技术细节和各种实现功能的技巧，还是专门搜索专业的文章吧，不过想必彼时已经能够知道自己想要什么了，那些问题也就不算个事了。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">该流程基本是本人的经验总结，未必是完全官方和教科书式的。不过虽然不一定是最好的解决办法，但起码都走得通，替后来人排除一些弯路。如果有幸被大牛看到此文，还请对不妥之处不吝赐教，哪怕路过留个名也好啊</span><span style="FONT-FAMILY: Calibri">~</span></p>
+<p><span style="FONT-FAMILY: Calibri"></span></p>
+<p><strong><span style="FONT-FAMILY: Calibri; COLOR: #a352cc">一、</span><span style="FONT-FAMILY: 宋体; COLOR: #a352cc">准备工作</span></strong></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #a352cc">1.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #a352cc">技能储备</span></strong></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #a352cc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;1)</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: Calibri; COLOR: #a352cc">Java</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp; 重要程度：<span style="FONT-FAMILY: 宋体">★<span style="FONT-FAMILY: 宋体">★<span style="FONT-FAMILY: 宋体">★<span style="FONT-FAMILY: 宋体">★<span style="FONT-FAMILY: 宋体">★</span></span></span></span></span></span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp; 当然是掌握的越多越好，毕竟</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">就是用</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">语言来开发的。遇到很多没有</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">基础的朋友问：要想直接学</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">，</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">应该掌握到什么程度？个人认为，如果一个熟练的</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">程序员技能算</span><span style="FONT-FAMILY: Calibri">100</span><span style="FONT-FAMILY: 宋体">分的话，掌握到</span><span style="FONT-FAMILY: Calibri">40-50</span><span style="FONT-FAMILY: 宋体">分，基本开发</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">不会有语言上的太大障碍了。其实主要也就是</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">的类、继承、接口、</span><span style="FONT-FAMILY: Calibri">IO</span><span style="FONT-FAMILY: 宋体">、</span><span style="FONT-FAMILY: Calibri">XML</span><span style="FONT-FAMILY: 宋体">解析等这些基本的操作掌握了也就可以开始用</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发些简单应用了。话说我一个朋友完全没有</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">基础，直接上手开发</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">，没几天也就能写出个应用，虽然他是个</span><span style="FONT-FAMILY: Calibri">C++</span><span style="FONT-FAMILY: 宋体">和</span><span style="FONT-FAMILY: Calibri">C#</span><span style="FONT-FAMILY: 宋体">高手……编程这玩意很多东西都是相通的，基本的搞明白了，再学学</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">特有的也就算入门了。不过还是<strong><span style="COLOR: #5500ff">强烈建议——掌握的越多越好</span></strong>。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">不过也不用摸不着头脑，太刻意去学，没目标抱着本《</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">编程思想》学也不见得有多大效果。自己动手做个</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">小应用，遇到问题了回头再针对性的去学</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">。我这个半吊子也是这样，开发</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">时，经常碰到一些</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">比较基础的类的使用，但当时没弄明白，所以需要回头专门再看看。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="COLOR: #aa00ff">2)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">XML</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;重要程度：★★★★</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Android</span><span style="FONT-FAMILY: 宋体">开发中很重要的一类文件，也是一种标记语言，与平台和编程语言无关，所以一般用来保存和传递各种数据、参数。在</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">中，很多配置信息、数据存储，尤其是</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">界面，要大量的和</span><span style="FONT-FAMILY: Calibri">xml</span><span style="FONT-FAMILY: 宋体">打交道。虽然很重要，但其实并不复杂，找些基本教程看看，明白</span><span style="FONT-FAMILY: Calibri">xml</span><span style="FONT-FAMILY: 宋体">结构和语法特点也就基本够用了。（这里顺便强烈推荐新手一个入门网站：</span><span><a href="http://www.w3school.com.cn/"><span style="FONT-FAMILY: Calibri">http://www.w3school.com.cn/</span></a></span><span style="FONT-FAMILY: 宋体">，简洁，全面，有力！没有多余的废话，页面干净无广告！……最主要我觉得有一定的权威性，作为</span><span style="FONT-FAMILY: Calibri">XML</span><span style="FONT-FAMILY: 宋体">等学习的入门网站和查询工具很有用）</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">3)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">数据库</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 重要程度：★★★</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Android</span><span style="FONT-FAMILY: 宋体">要保存数据，经常使用内置的</span><span style="FONT-FAMILY: Calibri">SQLite</span><span style="FONT-FAMILY: 宋体">数据库，可以使用</span><span style="FONT-FAMILY: Calibri">SQL</span><span style="FONT-FAMILY: 宋体">查询语言操作。所以如果有数据库使用经验，这个就简单多了。如果没接触过，就了解一些基本的</span><span style="FONT-FAMILY: Calibri">SQL</span><span style="FONT-FAMILY: 宋体">语句：增加、删除、修改、查询。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">4)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Dos</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;重要程度：★★</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;这个，貌似也谈不上掌握了，会操作就行了，因为之前碰到几个哥们，确实连</span><span style="FONT-FAMILY: Calibri">cd</span><span style="FONT-FAMILY: 宋体">，</span><span style="FONT-FAMILY: Calibri">dir</span><span style="FONT-FAMILY: 宋体">等一点</span><span style="FONT-FAMILY: Calibri">dos</span><span style="FONT-FAMILY: 宋体">操作都不会用，这就稍微麻烦点了，因为无论一开始配置</span><span style="FONT-FAMILY: Calibri">java</span><span style="FONT-FAMILY: 宋体">，还是最后生成签名，当然还有很多场合会需要在</span><span style="FONT-FAMILY: Calibri">Dos</span><span style="FONT-FAMILY: 宋体">环境操作，虽然可能有部分操作已经有图像界面替代了，但还是稍微看看吧，起码很酷么</span><span style="FONT-FAMILY: Calibri">~~</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">5)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Linux</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 重要程度：★</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;好像不应该是“重要程度”，应该是会使用程度吧。</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">本身是基于</span><span style="FONT-FAMILY: Calibri">Linux</span><span style="FONT-FAMILY: 宋体">内核开发，说不重要可能会被拍唉。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: 宋体">主要就是会一些基本的</span><span style="FONT-FAMILY: Calibri">linux</span><span style="FONT-FAMILY: 宋体">命令，</span><span style="FONT-FAMILY: Calibri">su,sh,cd</span><span style="FONT-FAMILY: 宋体">什么的，后期调试</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">程序可能会用到，比如查看</span><span style="FONT-FAMILY: Calibri">SQLite</span><span style="FONT-FAMILY: 宋体">数据。也不用特意去学，需要的时候网上现找找，多用几次也就记住了。</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">2.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">工具准备</span></strong></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1)</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Eclipse</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp; 最强大的</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">开发工具，安装</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发插件后可以方便快速的开发和调试</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">程序。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">2)</span></strong></span><strong><span>&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Android SDK</span></strong></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Android</span><span style="FONT-FAMILY: 宋体">开发工具包，包括核心</span><span style="FONT-FAMILY: Calibri">API</span><span style="FONT-FAMILY: 宋体">，</span><span style="FONT-FAMILY: Calibri">AVD</span><span style="FONT-FAMILY: 宋体">（</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">虚拟设备）等，可以到</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">官网下载。具体安装配置就不多写了，网上很多，我再引用这文章写成书了……</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 参考：<a href="http://android.tgbus.com/Android/tutorial/200812/171154.shtml">http://android.tgbus.com/Android/tutorial/200812/171154.shtml</a></span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">3)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Java SDK</span></strong></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java</span><span style="FONT-FAMILY: 宋体">工具包，包括</span><span style="FONT-FAMILY: Calibri">JDK</span><span style="FONT-FAMILY: 宋体">和</span><span style="FONT-FAMILY: Calibri">JRE</span><span style="FONT-FAMILY: 宋体">，可到</span><span style="FONT-FAMILY: Calibri">Java</span><span style="FONT-FAMILY: 宋体">官网下载。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;安装，配置环境变量。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 参考：<a href="http://blog.csdn.net/huanghm88/article/details/3965218">http://blog.csdn.net/huanghm88/article/details/3965218</a>（很全，一般到path和classpath设置完就ok了）</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">4)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">其他</span></strong></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FireWorks</span><span style="FONT-FAMILY: 宋体">：用于编辑</span><span style="FONT-FAMILY: Calibri">png</span><span style="FONT-FAMILY: 宋体">图片，</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">中主要的图片格式。纯粹个人喜好，有其他图片编辑工具也行。</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">3.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">文档资料</span></strong></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1)</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">一本纸质书</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 最好有本入门的纸质书，毕竟写的质量比较好的书能够尽量全部的涵盖</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">开发各个方面，对新手很有帮助。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp; 说下我当时看的吧：《深入浅出Google Android》，人民邮电出版的，不过很老了，09年的，还是基于Android API1.5。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">2)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">API</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">文档</span></strong></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java API</span><span style="FONT-FAMILY: 宋体">，</span><span style="FONT-FAMILY: Calibri">Android API</span><span style="FONT-FAMILY: 宋体">，重要的查询手册。不能上传附件，这个搜一下吧，很多。</span></p>
+<p><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">二、</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">开发</span></strong></p>
+<p><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff"></span><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">&nbsp;1.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">建立项目</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;在</span><span style="FONT-FAMILY: Calibri">Eclipse</span><span style="FONT-FAMILY: 宋体">中新建一个</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">项目，基本流程是：新建项目，选择</span><span style="FONT-FAMILY: Calibri">Android Project</span><span style="FONT-FAMILY: 宋体">，然后输入</span><span style="FONT-FAMILY: Calibri">package</span><span style="FONT-FAMILY: 宋体">名、应用名和</span><span style="FONT-FAMILY: Calibri">Activity</span><span style="FONT-FAMILY: 宋体">名，选择</span><span style="FONT-FAMILY: Calibri">Android Api</span><span style="FONT-FAMILY: 宋体">版本。<strong><span style="COLOR: #ff0000"></span></strong></span></p>
+<p><span style="FONT-FAMILY: 宋体"><strong><span style="COLOR: #ff0000">&nbsp;&nbsp;&nbsp; 菜鸟提示</span></strong>：</span><span style="FONT-FAMILY: Calibri">package</span><span style="FONT-FAMILY: 宋体">，包名，一般的命名规则是尽量独一无二，方便区分和管理，所以一般比较规范的命名都是公司域名的倒写，比如</span><span style="FONT-FAMILY: Calibri">google</span><span style="FONT-FAMILY: 宋体">的包，</span><span style="FONT-FAMILY: Calibri">google</span><span style="FONT-FAMILY: 宋体">域名是</span><span style="FONT-FAMILY: Calibri">google.com</span><span style="FONT-FAMILY: 宋体">，所以包名是：</span><span style="FONT-FAMILY: Calibri">com.google.*</span></p>
+<p><span><span style="FONT-FAMILY: Calibri"><strong><span style="COLOR: #aa00ff">2.</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">基本开发流程</span></strong></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="COLOR: #aa00ff">&nbsp; 1</span><span style="COLOR: #aa00ff">)</span></span><span><span style="COLOR: #aa00ff">&nbsp;</span>&nbsp;&nbsp;&nbsp;</span></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">构思布局</span></strong><span style="FONT-FAMILY: 宋体">，用</span><span style="FONT-FAMILY: Calibri">xml</span><span style="FONT-FAMILY: 宋体">构建基本的布局和控件</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="COLOR: #aa00ff">2)</span></span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">写</span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">java</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">程序</span></strong><span style="FONT-FAMILY: 宋体">，实体化</span><span style="FONT-FAMILY: Calibri">xml</span><span style="FONT-FAMILY: 宋体">的布局、控件、实现业务逻辑。<strong></strong></span></p>
+<p><span style="FONT-FAMILY: 宋体"><strong><span style="COLOR: #ff0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 菜鸟提示</span></strong>：很多控件既可以在</span><span style="FONT-FAMILY: Calibri">xml</span><span style="FONT-FAMILY: 宋体">文件中设定各种属性，也可以在</span><span style="FONT-FAMILY: Calibri">java</span><span style="FONT-FAMILY: 宋体">文件中设定属性；通常如果需要动态的改变某些属性，比如</span><span style="FONT-FAMILY: Calibri">setText()</span><span style="FONT-FAMILY: 宋体">，则需要在</span><span style="FONT-FAMILY: Calibri">java</span><span style="FONT-FAMILY: 宋体">中实现，这也是非常常用的，比如按下按键，按键颜色变深等等。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">3)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体"><span style="COLOR: #aa00ff">运行，调试程序</span></span></strong><span style="FONT-FAMILY: 宋体">：即可以使用</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">模拟器调试，也可以通过数据线，直接接手机调试。提示：如果是用模拟器调试，调试后需要修改程序再次调试时，不需要关闭模拟器，直接再次运行就可以。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">4)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">美化、找图片：</span><span style="FONT-FAMILY: 宋体"><span style="COLOR: #ff0000">菜鸟提示</span></span></strong><span style="FONT-FAMILY: 宋体">：</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">标准图标根据手机分辨率不同，分别有</span><span style="FONT-FAMILY: Calibri">36*36/48*48/72*72</span><span style="FONT-FAMILY: 宋体">这三种尺寸，你会看到</span><span style="FONT-FAMILY: Calibri">drawable-hdpi/drawable-ldpi/drawable-mdpi</span><span style="FONT-FAMILY: 宋体">不同的目录用来存储不同尺寸的图标，在</span><span style="FONT-FAMILY: Calibri">AndroidManifest.xml</span><span style="FONT-FAMILY: 宋体">中只需要写</span><span style="FONT-FAMILY: Calibri">@drawable/icon</span><span style="FONT-FAMILY: 宋体">就可以，它会根据屏幕分辨率去找不同目录下的图标。（参考：</span><span><a href="http://zl4393753.iteye.com/blog/1056785"><span style="FONT-FAMILY: Calibri">http://zl4393753.iteye.com/blog/1056785</span></a></span><span style="FONT-FAMILY: 宋体">）</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="COLOR: #aa00ff">&nbsp; 5)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">关于应用中的文字等引用资源</span></strong><span style="FONT-FAMILY: 宋体">：重点说说文字吧，应用中比如菜单名字，标题等，既可以直接写在</span><span style="FONT-FAMILY: Calibri">java</span><span style="FONT-FAMILY: 宋体">文件中，也可先写在</span><span style="FONT-FAMILY: Calibri">res/values/strings.xml</span><span style="FONT-FAMILY: 宋体">文件里。不过呢，还是<strong><span style="COLOR: #5500ff">强烈建议</span></strong>，尽量都写在</span><span style="FONT-FAMILY: Calibri">strings.xml</span><span style="FONT-FAMILY: 宋体">文件里，这样以后要修改文字，直接改这个文件就行，否则在</span><span style="FONT-FAMILY: Calibri">java</span><span style="FONT-FAMILY: 宋体">程序里找可费了大劲了，尤其是要开发多语言版本的话，所有文字全部要改成外语，当然还是在</span><span style="FONT-FAMILY: Calibri">strings.xml</span><span style="FONT-FAMILY: 宋体">里写方便的多。养成个好习惯，不要嫌麻烦，</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">系统里专门弄这么个文件是有道理的。</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6)</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体"><span style="COLOR: #aa00ff">最后，切记切记</span></span></strong><span style="FONT-FAMILY: 宋体">，修改</span><span style="FONT-FAMILY: Calibri">AndroidManifest.xml</span><span style="FONT-FAMILY: 宋体">文件，修改版本信息，加上需要的各种权限，如发送短信，访问网络等等，否则程序发布了，很多相关功能没法用。</span></p>
+<p><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">三、</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">打包发布</span></strong></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每次发布前都是最激动人心的时刻啊</span><span style="FONT-FAMILY: Calibri">~</span><span style="FONT-FAMILY: 宋体">然而这部分网上很少有专门讲的（也许我手拙没找到），针对这部分我还专门到开发论坛发布了很多帖子提问，时至今日，除了同样困扰的菜鸟帮顶，无人回答……鄙视一下。也正因如此，动了写这篇文章的念头，<strong><span style="COLOR: #991f5e">Android开发，很多东西简单，但是从没有人和你说过</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #991f5e">~</span></strong></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">1.</span><span>&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">加入广告</span></strong></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="FONT-FAMILY: 宋体">我们很多开发的应用，最终目的是发布到网上给大家用，如果顺便能有收入也是我们的一项劳动成果，虽然很多很惨淡（又是我不堪回首的过去啊）。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="COLOR: #aa00ff">1)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">选择广告平台</span></strong><span style="FONT-FAMILY: 宋体">：常用的有</span><span style="FONT-FAMILY: Calibri">Google</span><span style="FONT-FAMILY: 宋体">的</span><span style="FONT-FAMILY: Calibri">AdMob</span><span style="FONT-FAMILY: 宋体">，国内的有：有米，微云等等，至于说哪个效果最好，众说纷纭，最好还是自己亲自试试。还有一种平台是各种广告平台的集成，能根据使用者优化，动态选择。但因为某些电子市场不允许这个，我就没用，也就暂时不点名了，想试试的，百度……（我没说是第一个哈</span><span style="FONT-FAMILY: Calibri">~</span><span style="FONT-FAMILY: 宋体">）。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span style="FONT-FAMILY: 宋体">不过呢，最好固定一两个效果比较好的，因为很多平台要提款的话，必须达到一定额度，而且太分散的话，自己添加着也挺麻烦的。当然，如果这个平台效果公认的已经落后了，还是要毅然换平台的，毕竟不同的广告联盟广告主资源水平还是有差距。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="COLOR: #aa00ff">&nbsp;&nbsp;2)</span></strong></span><strong><span>&nbsp;</span></strong><span>&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体">普遍有一个说法，如果是针对<strong><span style="COLOR: #aa00ff">国外的应用，最好还是</span></strong></span><strong><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Google</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">的</span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">Admob</span></strong><span style="FONT-FAMILY: 宋体">，针对英文环境能够提供的广告数量也多。不过本人没用过，不多说了。至于为什么没用，见下文。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="COLOR: #aa00ff">&nbsp;3)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;</span></strong></span><span style="FONT-FAMILY: 宋体">进入正题，<strong><span style="COLOR: #aa00ff">如何给程序加入广告呢</span></strong>？通常步骤是：下载该平台的</span><span style="FONT-FAMILY: Calibri">sdk</span><span style="FONT-FAMILY: 宋体">包，把</span><span style="FONT-FAMILY: Calibri">jar</span><span style="FONT-FAMILY: 宋体">加入到你项目的</span><span style="FONT-FAMILY: Calibri">buildpath</span><span style="FONT-FAMILY: 宋体">，然后在主程序里加上调用广告的程序，再在界面中设置展示广告的位置，最后修改</span><span style="FONT-FAMILY: Calibri">AndroidManifest.xml</span><span style="FONT-FAMILY: 宋体">文件，加入广告涉及的程序、权限等。然后，欧了！</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 具体详细的安装方法，看广告平台提供的说明文档就行了，放心，<strong><span style="COLOR: #ff0000">一定会非常详细，一步一步教你，因为他们比你更希望你的应用中展示他们的广告。</span></strong></span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">2.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">添加最终用户许可协议</span></strong></p>
+<p><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></strong><span style="FONT-FAMILY: 宋体">类似</span><span style="FONT-FAMILY: Calibri">License</span><span style="FONT-FAMILY: 宋体">授权使用之类的，可能你已经在某些程序中见过，第一次启动，显示的那一大篇文字，却几乎不看，直接点“</span><span style="FONT-FAMILY: Calibri">Accept</span><span style="FONT-FAMILY: 宋体">”……具体添加步骤……网上还真没有几个讲这玩意的，要不说很多东西没人告诉你呢。我还是从书上看来的，好几页，也懒得抄了。话说，其实这东西主要就是保护你的知识产权的，也不知道是咱们缺少这意识，还是太简单没人写。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 找了半天找到个老外写的：</span><span><a href="http://bees4honey.com/blog/tutorial/adding-eula-to-android-app/"><span style="FONT-FAMILY: Calibri">http://bees4honey.com/blog/tutorial/adding-eula-to-android-app/</span></a></span><span style="FONT-FAMILY: 宋体">，差不多就是这个步骤。我也只用过一次，是在给摩托罗拉电子市场提交应用时，人家明确要求要有这个东西。到时候需要的话就参考一下，不想弄这个呢，也完全不影响你程序的正常使用。</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">3.</span><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">数字签名</span></strong><span style="FONT-FAMILY: 宋体">：你开发的</span><span style="FONT-FAMILY: Calibri">Android</span><span style="FONT-FAMILY: 宋体">应用必须有签名才能安装。之前调试的时候，是</span><span style="FONT-FAMILY: Calibri">Android SDK</span><span style="FONT-FAMILY: 宋体">自动用默认的签名调试，发布的时候必须要重新生成一个签名；另外，<strong><span style="COLOR: #ff0000">同一个应用的不同版本，要使用同一个签名</span></strong>，这样安装程序的时候，才会自动升级，新版本代替旧版本。否则，不同的签名系统会认为是不同的应用，而且包名（之前的</span><span style="FONT-FAMILY: Calibri">package</span><span style="FONT-FAMILY: 宋体">）必须不一样。具体签名过程，参考这里：</span><span><a href="http://www.cnblogs.com/feisky/archive/2010/01/17/1650076.html"><span style="FONT-FAMILY: Calibri">http://www.cnblogs.com/feisky/archive/2010/01/17/1650076.html</span></a></span></p>
+<p><span style="FONT-FAMILY: 宋体">还有这里：</span></p>
+<p><span><a href="http://lufengdie.iteye.com/blog/814660"><span style="FONT-FAMILY: Calibri">http://lufengdie.iteye.com/blog/814660</span></a></span></p>
+<p><span style="FONT-FAMILY: 宋体">其实这里连带打包都包括了。</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">4.</span><span>&nbsp;&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">打包为可安装的</span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">apk</span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">文件</span></strong><span style="FONT-FAMILY: 宋体">：</span><span style="FONT-FAMILY: Calibri">Eclipse</span><span style="FONT-FAMILY: 宋体">中</span><span style="FONT-FAMILY: Calibri">,</span><span style="FONT-FAMILY: 宋体">右击需要签名的工程</span><span style="FONT-FAMILY: Calibri">--&gt;android tools--&gt;export signed application package... <br></span><span style="FONT-FAMILY: 宋体">出现对话框</span><span style="FONT-FAMILY: Calibri">,</span><span style="FONT-FAMILY: 宋体">选择需要签名的工程；</span><span style="FONT-FAMILY: Calibri">next,</span><span style="FONT-FAMILY: 宋体">选择上面生成的</span><span style="FONT-FAMILY: Calibri">android.keystore</span><span style="FONT-FAMILY: 宋体">文件位置和设置的密码</span><span style="FONT-FAMILY: 宋体">；</span><span style="FONT-FAMILY: Calibri">next</span><span style="FONT-FAMILY: 宋体">；</span><span><br><span style="FONT-FAMILY: Calibri">next,</span></span><span style="FONT-FAMILY: 宋体">选择签名生成文件的位置和名称</span><span><br><span style="FONT-FAMILY: Calibri">finish,</span></span><span style="FONT-FAMILY: 宋体">搞定啦</span><span style="FONT-FAMILY: Calibri">...</span></p>
+<p><strong><span><span style="FONT-FAMILY: Calibri; COLOR: #aa00ff">5.</span><span>&nbsp;&nbsp;</span></span><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">发布你的应用程序</span></strong></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">1)</span></strong></span><strong><span>&nbsp;&nbsp;</span></strong></span><span style="FONT-FAMILY: 宋体">首先，<strong><span style="COLOR: #aa00ff">如果应用中有广告，应先上传到对应广告平台</span></strong>。审核通过后，你的广告才真正启用。</span></p>
+<p><span><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><span style="COLOR: #aa00ff">2)</span></strong></span><strong><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></strong></span><strong><span style="FONT-FAMILY: 宋体; COLOR: #aa00ff">发布到其他电子市场</span></strong><span style="FONT-FAMILY: 宋体">。这一步其实可以和上一步同时进行。但一般为了防止你没测试到的错误或者其他原因，广告平台审核未通过，还需要再次修改，而且一般的广告平台</span><span style="FONT-FAMILY: Calibri">1~2</span><span style="FONT-FAMILY: 宋体">个工作日就可以审核完成，稍微等一下不误事。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;广告审核通过后，就可以发布到各大电子市场啦！</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp; 以安卓市场为例，先要到这里注册开发者身份，然后提交你的应用，当然一般还要提交应用截图等信息，截图可以在模拟器上用电脑截图，也可以在手机上用截图软件截图（推荐个截图软件：ScreenCapture，<a href="http://bbs.hiapk.com/thread-737845-1-1.html">http://bbs.hiapk.com/thread-737845-1-1.html</a>下载）。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp; 上传完，填好信息，就等着审核吧。审核通过了，正式上线，然后你就可以在安卓电子市场搜索到你的应用了</span><span style="FONT-FAMILY: Calibri">~</span></p>
+<p><span style="FONT-FAMILY: 宋体">其他的电子市场类似，我常用的有</span><span style="FONT-FAMILY: Calibri">:</span></p>
+<p><span><a href="http://www.eoemarket.com/"><span style="FONT-FAMILY: Calibri">http://www.eoemarket.com</span></a></span></p>
+<p><span><a href="http://www.goapk.com/"><span style="FONT-FAMILY: Calibri">http://www.goapk.com</span></a></span></p>
+<p><span><a href="http://www.hiapk.com/"><span style="FONT-FAMILY: Calibri">http://www.hiapk.com</span></a></span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 其他还有好多，木蚂蚁，爱米，机锋网等等。另外中国移动</span><span style="FONT-FAMILY: Calibri">MM</span><span style="FONT-FAMILY: 宋体">市场不允许广告，要注意一下。其他电信、联通也有自己的应用市场。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当然，还有个最重要的</span><span style="FONT-FAMILY: Calibri">Google</span><span style="FONT-FAMILY: 宋体">的</span><span style="FONT-FAMILY: Calibri">Android Market</span><span style="FONT-FAMILY: 宋体">，这个电子市场可是全球销售啊</span><span style="FONT-FAMILY: Calibri">~</span><span style="FONT-FAMILY: 宋体">不过因为你懂的原因，没有直接的中国大陆地区注册。要注册这里的开发者，必有有个支持美元的信用卡，而且需要</span><span style="FONT-FAMILY: Calibri">25</span><span style="FONT-FAMILY: 宋体">美元</span><span style="FONT-FAMILY: Calibri">/</span><span style="FONT-FAMILY: 宋体">每年（好像是）的注册费，注册地中国地区最近的只有香港，而且貌似有点麻烦，所以我也没去注册，有兴趣的试试。</span></p>
+<p><span style="FONT-FAMILY: 宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 其实直接把</span><span style="FONT-FAMILY: Calibri">apk</span><span style="FONT-FAMILY: 宋体">文件复制给别人就可以用了，只不过电子市场终究是传播最快的一种途径。如果有自己的博客、微博等等，也可以发个链接推广。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;P.S.:多去论坛看看，多提问，还是会有很多同好回复的~多试验。再推荐两个常用网站：</span></p>
+<p><span style="FONT-FAMILY: Calibri"><a href="http://stackoverflow.com/questions">http://stackoverflow.com/questions</a>&nbsp;一个老外的编程论坛，继承了老外事无巨细、不厌其烦解答的风格，基本你能想到的问题大部分都有</span></p>
+<p><span style="FONT-FAMILY: Calibri"><a href="http://findicons.com/">http://findicons.com/</a>&nbsp;很棒的图标搜索网站，美化必备。</span></p>
+<p><span style="FONT-FAMILY: Calibri">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="FONT-FAMILY: Verdana; FONT-SIZE: 18px">嗯，差不多就这些吧，</span><span style="FONT-FAMILY: Verdana; FONT-SIZE: 18px">the END. Happy Androiding~</span></p>
+<p><span style="FONT-FAMILY: Calibri"><img style="MAX-WIDTH: 650px" alt="" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/45369933_1.gif"><br></span></p>
+<p>&nbsp;</p>
+</td>
+<script>
+                                    var html = document.getElementById("artContent").innerHTML;
+                                    document.getElementById("artContent").innerHTML = html;
+
+                                </script>
+</tr>
+</tbody>
+</table>
+<div id="viewerPlaceHolder" style="width: 717px; height: 700px; display: none; margin: 0 auto;">
+</div>
+</div>
+<table>
+<tbody>
+<tr>
+<td>
+<ul></ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div></div>
+<span></span>
+<a></a>
+<p style="margin: 0; padding: 0;"></p>
+<p class="clearboth"></p>
+<div class="bdsharebuttonbox bottombtn bdshare-button-style0-16" data-bd-bind="1499630387624">
+<div class="zcommond" style="overflow: visible;">
+<a href="javascript:void(0);" class="btn_collect" onclick="SaveArt();artStatistics('20-3-2');">转藏到我的图书馆</a>
+<a id="flowimg3" href="javascript:void(0);" class="btn_good" onclick="Showflowerlayer('sendedLayer1');">献花（<span id="articleflowernum">1</span>）
+<span id="flowernumadd" style="display: none;">+1</span>
+</a>
+<span class="span1 f_left" onclick="setTimeout(function(){$('.bottombtn .sharelist_new').slideToggle(0);},10);artStatistics('20-8-3');" onmouseover="this.style.color='#0f659c'" onmouseout="this.style.color=''">分享：</span>
+<a class="sharewx f_left" href="javascript:void(0);" onclick="shareWeixin();artStatistics('20-8-6');">微信</a>
+<div class="s2 f_left" onclick="setTimeout(function(){$('.bottombtn .sharelist_new').slideToggle(0);},10);artStatistics('20-8-4');"><span></span></div>
+</div>
+<div class="sharelist_new" id="fenxiangLayer2">
+<a class="slbg1" href="javascript:void(0);" data-cmd="qzone" onclick="artStatistics('20-8-8');">QQ空间</a>
+<a class="slbg2" href="javascript:void(0);" data-cmd="sqq" onclick="artStatistics('20-8-10');">QQ好友</a>
+<a class="slbg3" href="javascript:void(0);" data-cmd="tsina" onclick="artStatistics('20-8-12');">新浪微博</a>
+<a class="slbg5" href="javascript:void(0);" onclick="showdivemail1();artStatistics('20-8-16');">推荐给朋友</a>
+</div>
+</div>
+<div class="bottom_controler">
+<p class="bottom_cleft">
+来自：
+<span class="a_username" style="width: auto;">
+<a href="http://www.360doc.com/userhome/11409172" id="savernickname2" target="_blank" onclick="artStatistics('20-7-2');">netpower1994</a>
+</span>
+&gt;
+<span id="cname" class="a_from"><a href="http://www.360doc.com/userhome.aspx?userid=11409172&amp;cid=-1000" target="_blank" onclick='artStatistics("20-6");'>《待分类》</a></span>
+</p>
+<div class="bottom_cright">
+<a href="https://www.baidu.com/s?wd=androiding+java+google&amp;tn=SE_hldp01010_6r0gix1f" target="_blank" class="a1" onclick="artStatistics('20-19');">以文找文</a>
+&nbsp;&nbsp;|&nbsp;&nbsp;
+<a href="javascript:void(0);" class="a2" onclick="showAlertLayer1();artStatistics('20-18');">举报</a>
+</div>
+</div>
+<div class="prev_next">
+<p id="lastart" class="p1" style="display: block;"> 上一篇：<a onclick='artStatistics("20-9-5");' href="http://www.360doc.com/content/14/0916/17/11409172_409969959.shtml" target="_blank">夜间工作有害身体健康吗？</a></p>
+<p id="nextart" class="p2" style="display: block;"> 下一篇：<span style="color:#b0b0b0;">[转]&nbsp;</span><a onclick='artStatistics("20-9-6");' href="http://www.360doc.com/content/14/0920/00/9428521_410830938.shtml" target="_blank">什么样的人容易遇到贵人？</a></p>
+</div>
+</div>
+<p class="clearboth"></p>
+<div style="width: 676px; float: left;">
+<div class="str_border" style="border: none; position: relative; z-index: 2;">
+<strong>猜你喜欢</strong>
+</div>
+<ul class="youlike" style="margin-top: -18px; position: relative; z-index: 1;">
+<div style="width: 676px; height: 280px; border: 0;" id="divyoulikead"><iframe id="youlikead" style="width: 676px; height: 280px; border: 0;" scrolling="no" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/adbaiduyoulike.htm" frameborder="0"></iframe></div>
+</ul>
+<div class="zcommond" style="padding: 10px 0 5px;">
+<div class="bottom_article f_left">
+<div class="str_border">
+<strong>类似文章</strong>
+<a href="http://www.360doc.com/relevant/410323193_more.shtml" target="_blank" class="a_more f_right" onclick="artStatistics(" 20-9-8');'="">更多</a>
+</div>
+<ul class="barticle_list">
+<li><span><a href="http://www.360doc.com/content/15/1011/23/22551567_504994233.shtml" target="_blank" onclick='artStatistics("20-9-7");'>一张图看懂家装全流程，菜鸟赶紧收藏吧！...</a></span></li>
+<li><span><a href="http://www.360doc.com/content/05/1017/12/2198_20318.shtml" target="_blank" onclick='artStatistics("20-9-7");'>Web2.0: 基于XML和Java标准的集成技术--...</a></span></li>
+<li><span><a href="http://www.360doc.com/content/14/0407/00/12186955_366900967.shtml" target="_blank" onclick='artStatistics("20-9-7");'>菜鸟家装全流程</a></span></li>
+<li><span><a href="http://www.360doc.com/content/13/0415/00/7858166_278315600.shtml" target="_blank" onclick='artStatistics("20-9-7");'>五谷五果五禽五菜功效及应用</a></span></li>
+<li><span><a href="http://www.360doc.com/content/09/1024/09/52776_7757124.shtml" target="_blank" onclick='artStatistics("20-9-7");'>网络常识菜鸟笔记（4）学会阅读帮助文档...</a></span></li>
+<li><span><a href="http://www.360doc.com/content/07/1211/22/1171_887310.shtml" target="_blank" onclick='artStatistics("20-9-7");'>AJAX是什么</a></span></li>
+<li><span><a href="http://www.360doc.com/content/14/0910/17/14979747_408452138.shtml" target="_blank" onclick='artStatistics("20-9-7");'>黑客文化的精髓</a></span></li>
+<li><span><a href="http://www.360doc.com/content/14/1213/15/18361029_432623809.shtml" target="_blank" onclick='artStatistics("20-9-7");'>改掉以下坏习惯，让你的Android手机换发...</a></span></li>
+</ul>
+</div>
+<div class="bottom_article f_right">
+<div class="str_border">
+<strong>精选文章</strong>
+</div>
+<ul class="barticle_list">
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/0510/21/11985744_284368202.shtml" target="_blank">秦淮八艳指的是哪八位美女？</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/0803/17/11747880_304420046.shtml" target="_blank">寒门再难出贵子，太现实了！</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/0702/23/9774604_297132422.shtml" target="_blank">富人不说，穷人不懂——50位亿万富豪白手起家的赚钱哲学1</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/12/1016/19/156610_241774564.shtml" target="_blank">《麻衣神相》对应速查</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/0715/18/882413_300069657.shtml" target="_blank">简便内壮法：揉腹</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/0910/22/6017453_313489965.shtml" target="_blank">中国式求人怪圈</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/12/1210/23/8005386_253216425.shtml" target="_blank">几种绝密配方(兰州拉面?潮州卤水??陕西擀面皮与凉皮调料?樊记腊汁肉)</a></span></li>
+<li><span><a onclick="artStatistics('20-9-9');" href="http://www.360doc.com/content/13/1126/21/10547485_332276554.shtml" target="_blank">一生都不一定看到的图片</a></span></li>
+</ul>
+</div>
+</div>
+<div id="divunderad"><iframe id="underZcommondAd" style="width: 676px; height: 100px;" scrolling="no" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/underad.htm" frameborder="0"></iframe></div>
+<div id="ReflectionPart"><div style="margin: 0px 0px;"><div class="plbox" style="height:auto;"><div style="padding-left:6px;margin-top:10px;padding-bottom:14px;"><div style="height: 23px;font-size:16px;font-weight:bold;" class="titwx">发表评论</div><div class="deluwx" style="margin-top:10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请&nbsp;<span><a onclick="ReflectionLoginform();artStatistics('20-4-1');" href="javascript:void(0);">登录</a></span>&nbsp;或者&nbsp;<span><a onclick="InsertLogData(4);artStatistics('20-4-2');" href="http://www.360doc.com/register.aspx?refer=53&amp;reurl=showweb/0/0/54400091122.aspx" target="_blank">注册</a></span>&nbsp;后再进行评论</div><div class="rt360" style="height: 26px;margin:-22px 170px 0 0;_display:inline;"><span class="dsfwz">社交帐号登录：</span><a class="dsftb sf1" href="javascript:void(0);" onclick="ArtLoginTypeID=13;toSNSLogin('smb');artStatistics('20-4-3');_hmt.push(['_trackEvent','loginsina','clicknum','wenzhangyeremark']);" title="新浪微博"></a><a class="dsftb sf2 " onclick="ArtLoginTypeID=13;toSNSLogin('qq');artStatistics('20-4-4');_hmt.push(['_trackEvent','loginqq','clicknum','wenzhangyeremark']); " href="javascript:void(0);" title="腾讯QQ"></a><a class="dsftb sf3" href="javascript:void(0);" onclick="ArtLoginTypeID=13;toSNSLogin('wx');artStatistics('20-4-5');_hmt.push(['_trackEvent','loginrenren','clicknum','wenzhangyeremark']);" title="微信"></a></div></div></div></div></div>
+<div style="padding-top: 15px; padding-left: 15px;" id="Reflction"><div id="360docRefTN" class="wenzhang_bt" style="display:none;"></div><div id="360docRefCT"></div><div id="360docRefPB" style="display: none;"></div></div>
+</div>
+</div>
+<div class="a_right">
+<div class="user_info">
+<div class="user_photo f_left">
+<p class="user_photopic">
+<a href="http://www.360doc.com/userhome/11409172" id="userphotourl" target="_blank" onclick="artStatistics('20-7-4');">
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/11409172_201409081211230325_main.jpg" id="userphoto" height="58" width="58">
+</a>
+</p>
+<a href="javascript:void(0);" onclick="docTalk();artStatistics('20-15');" class="user_talk" title="与TA对话"></a>
+</div>
+<div class="user_data f_right">
+<div class="user_data_name">
+<a href="http://www.360doc.com/userhome/11409172" id="nickname" target="_blank" onclick="artStatistics('20-7-3');">netpower1994</a>
+<img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/user_name_tag.gif" alt="图书馆">
+</div>
+<p id="userdegree"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/userstar1.gif"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/userstar1.gif"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/userstar3.gif"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/userstar3.gif"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/userstar3.gif"></p>
+<div class="user_data_num">
+<a id="spanfollowstatus" class="gz_no"></a>
+<script type="text/javascript">isfollow(11409172);</script>
+<span id="follownum">18</span>&nbsp;&nbsp;&nbsp;&nbsp;
+<span>馆藏</span>&nbsp;<span id="artnum">767</span>
+</div>
+</div>
+</div>
+<div class="his_her"><ul class="his_her_type"><li class="f_left curone">TA的最新馆藏</li></ul><div class="his_her_div" style="height:190px;"><ul class="his_her_list"><li><div><span></span><a href="http://www.360doc.com/content/17/0222/02/11409172_630997414.shtml" target="_blank" onclick="artStatistics('20-9-3');">如何通过肢体接触推进和女生的关系？</a></div><div><span style="color:#b0b0b0;">[转]&nbsp;</span><a href="http://www.360doc.com/content/11/0731/08/4167593_136866291.shtml" target="_blank" onclick="artStatistics('20-9-3');">你想搞定女人，第一件事，你要知道女人不会告诉你的事。看完发表想法!!!</a></div><div><span style="color:#b0b0b0;">[转]&nbsp;</span><a href="http://www.360doc.com/content/11/0731/08/4167593_136866291.shtml" target="_blank" onclick="artStatistics('20-9-3');">你想搞定女人，第一件事，你要知道女人不会告诉你的事。看完发表想法!!!</a></div><div><span style="color:#b0b0b0;">[转]&nbsp;</span><a href="http://www.360doc.com/content/10/1208/10/94176_76053159.shtml" target="_blank" onclick="artStatistics('20-9-3');">男人，了解女人从这里入手</a></div><div><span style="color:#b0b0b0;">[转]&nbsp;</span><a href="http://www.360doc.com/content/13/0420/18/4251088_279730207.shtml" target="_blank" onclick="artStatistics('20-9-3');">无性的婚姻，再好的感情也会出现问题</a></div><div><span style="color:#b0b0b0;">[转]&nbsp;</span><a href="http://www.360doc.com/content/16/0605/21/33295198_565336781.shtml" target="_blank" onclick="artStatistics('20-9-3');">这些秘密，女人到死都不愿告诉你！</a></div></li></ul></div></div>
+<div class="clear360doc" style="padding-top: 10px; height: 260px;">
+<div id="divifartad1">
+<script>
+            var strow = document.body.offsetWidth;
+            var strsw = document.body.scrollWidth;
+            var strsc = window.screen.width;
+
+            function aliad1() {
+                document.write('<a style="display:none!important" id="tanx-a-mm_11220363_1101997_10218757"></a>');
+                tanx_s = document.createElement("script");
+                tanx_s.type = "text/javascript";
+                tanx_s.charset = "gbk";
+                tanx_s.id = "tanx-s-mm_11220363_1101997_10218757";
+                tanx_s.async = true;
+                tanx_s.src = "http://p.tanx.com/ex?i=mm_11220363_1101997_10218757";
+                tanx_h = document.getElementsByTagName("head")[0];
+                if (tanx_h) tanx_h.insertBefore(tanx_s, tanx_h.firstChild);
+            }
+
+            function aliad2() {
+                document.write('<a style="display:none!important" id="tanx-a-mm_11220363_1101997_26568831"></a>');
+                tanx_s = document.createElement("script");
+                tanx_s.type = "text/javascript";
+                tanx_s.charset = "gbk";
+                tanx_s.id = "tanx-s-mm_11220363_1101997_26568831";
+                tanx_s.async = true;
+                tanx_s.src = "http://p.tanx.com/ex?i=mm_11220363_1101997_26568831";
+                tanx_h = document.getElementsByTagName("head")[0];
+                if (tanx_h) tanx_h.insertBefore(tanx_s, tanx_h.firstChild);
+            }
+
+
+            if (strsc <= 1024) {
+                aliad1();
+            }
+            else {
+                //300宽
+                aliad2();
+            }
+        </script><ins style="display:inline-block;padding:0;margin:0;width:300px;height:250px;*zoom:1;*display:inline; position:relative;" id="tanxssp-outer-conmm_11220363_1101997_26568831"><div id="tanxssp_con_mm_11220363_1101997_26568831" style="overflow:hidden;display:inline-block;position:relative;width:300px;height:250px;*display:inline;*zoom:1;font:12px/1.5 tahoma,'Hiragino Sans GB','microsoft yahei',sans-serif;"><iframe id="tanxssp-outer-iframemm_11220363_1101997_26568831" style="width: 300px; height: 250px;" border="0" scrolling="no" marginwidth="0" allowtransparency="true" marginheight="0" frameborder="0"></iframe><a style="display:none !important;" id="tanx_frameanchor_mm_11220363_1101997_26568831" data-mid="29628780"></a><ins style="display:inline-block;height:13px;line-height:13px;position:absolute;right:20px;bottom:0;background: url(//img.alicdn.com/tfs/TB1HaIwMVXXXXb.XFXXXXXXXXXX-1-26.png);"><ins style="font-size:9px;transform:scale(0.8);-moz-transform:scale(0.94);display:inline-block;height:13px;color:#808080;color/*\**/:#b3b3b3 \9;text-decoration:none;font-weight:normal">晶赞</ins></ins><a id="sxmm_11220363_1101997_26568831" href="javascript:;" style="width:20px;height:13px;right:0px;bottom:0px;display:block;position:absolute;cursor:pointer;z-index:250;margin:0;">   <span id="sx1mm_11220363_1101997_26568831" style="float:none;width:20px;display:block;height:13px;"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/TB1tWvVJFXXXXc_aXXXXXXXXXXX-40-26.png" style="width:20px;height:13px;margin:auto;display:block;min-height:13px;" border="0/"></span><div id="sxtipmm_11220363_1101997_26568831" style="display:none;position:absolute;left:-38px;bottom:13px;"><img src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/TB1upAiJXXXXXa5aXXXXXXXXXXX-116-30.png" style="width:58px;height:15px;margin:auto;display:block;min-height:15px;" border="0"></div></a></div></ins><a style="display:none!important" id="tanx-a-mm_11220363_1101997_26568831"></a>
+</div>
+<div style="height: 10px;">
+</div>
+</div>
+<div class="his_her" id="recommendArt" style="margin-top: 5px;">
+<div class="str_border" style="margin: 0;">
+<span style="font-size: 14px; float: left;">推荐阅读</span>
+<a style="float: right;" class="a_more" onclick="artStatistics('20-9-4');" href="http://www.360doc.com/readroom.html" target="_blank">更多</a>
+</div>
+<div class="his_her_div" style="height: 264px;">
+<ul class="his_her_list">
+<li id="recommendArtLists"><div><span></span><a href="http://www.360doc.com/content/14/0819/04/706976_403108830.shtml" target="_blank" onclick="artStatistics('20-9-1');">脚本实现U盘自动挂载（linux）</a></div><div><span></span><a href="http://www.360doc.com/content/17/0202/02/16534268_625916179.shtml" target="_blank" onclick="artStatistics('20-9-1');">一个不败一个求败，当东方不败遇到独孤求败……</a></div><div><span></span><a href="http://www.360doc.com/content/16/0703/11/1414235_572621581.shtml" target="_blank" onclick="artStatistics('20-9-1');">心情低落时该看的文章，不能让自己一直沉沦下去</a></div><div><span></span><a href="http://www.360doc.com/content/16/0820/01/11640107_584542899.shtml" target="_blank" onclick="artStatistics('20-9-1');">打造最优秀值得收藏推荐的 Google Chrome 谷歌浏览器插件扩展推荐列表 | 异次元软件下载</a></div><div><span></span><a href="http://www.360doc.com/content/15/0421/11/22894037_464803113.shtml" target="_blank" onclick="artStatistics('20-9-1');">评测 – 不建议选择BlueHost虚拟主机的5个理由 | GoDaddy优惠码专题</a></div><div><span></span><a href="http://www.360doc.com/content/16/0215/11/20433456_534888101.shtml" target="_blank" onclick="artStatistics('20-9-1');">美好的一天，从早安心语开始</a></div><div><span></span><a href="http://www.360doc.com/content/15/0920/05/11409172_500315935.shtml" target="_blank" onclick="artStatistics('20-9-1');">Web 开发在 2015 年及未来的发展趋势 - 博客 - 伯乐在线</a></div><div><span></span><a href="http://www.360doc.com/content/14/1004/02/11409172_414342759.shtml" target="_blank" onclick="artStatistics('20-9-1');">成大事者必备的能力、手段、心态</a></div><div><span></span><a href="http://www.360doc.com/content/14/1003/04/11409172_414168403.shtml" target="_blank" onclick="artStatistics('20-9-1');">幸福婚姻的秘诀：婚前恋爱少，婚礼宾客多 | 科学人 | 果壳网 科技有意思</a></div></li>
+</ul>
+</div>
+</div>
+<div class="clear360doc" style="padding-top: 10px;" id="divifartad2"><iframe id="ifartad2" scrolling="no" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ad2_300.htm" height="250" frameborder="0" width="300px"></iframe></div>
+<br>
+<div id="divifartrightsogou"><iframe id="ifartrightsogou" scrolling="no" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/artrightadsogou300.htm" height="190" frameborder="0" width="300px"></iframe></div>
+<div class="clear360doc" id="divad5" style="padding-top: 11px; width: 300px; position: fixed; top: 80px; left: 839.5px;">
+<div id="divad4" style="">
+<div id="divifartad"><iframe id="ifartad" scrolling="no" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ad4_300.htm" height="250px" frameborder="0" width="300px"></iframe></div>
+<div class="ggwz">
+<a href="javascript:void(0);" onclick="closead(2);">关闭</a>
+</div>
+<div style="height: 13px;">
+</div>
+</div>
+<div style="clear: both;" id="divad6">
+<div id="adfloatbaidu"><iframe id="ifartadfloadbaidu" scrolling="no" style="width: 250px; margin: 0px auto;" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/ad5.htm" height="250px" frameborder="0" width="250px"></iframe></div>
+<div class="ggwz" style="left: 25px;">
+<a href="javascript:void(0);" onclick="closead(3);">关闭</a>
+</div>
+<div style="height: 13px;">
+</div>
+</div>
+<div style="height: 75px;">
+</div>
+</div>
+</div>
+</div>
+<p class="clearboth"></p>
+<input id="artid" value="410323193" type="hidden">
+<input id="docarttitle" value="%e7%bb%99%e8%8f%9c%e9%b8%9f%e7%9c%8b%e7%9a%84Android%e5%ba%94%e7%94%a8%e5%bc%80%e5%8f%91%e5%85%a8%e6%b5%81%e7%a8%8b+-+CSDN%e5%8d%9a%e5%ae%a2" type="hidden">
+<input id="firstartid" value="410323193" type="hidden">
+<input id="subclassid" value="-1" type="hidden">
+<input id="recommendart1" value="278315600" type="hidden">
+<input id="recommendart2" value="-1" type="hidden">
+<input id="isowner" value="False" type="hidden">
+<input id="artreadroomid" value="0" type="hidden">
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/showarticle.js" type="text/javascript" charset="utf-8"></script>
+<script>GerLookingUserInfo(1,11409172,1,0,'-1',-1,10,0);OutputSource('http://m.blog.csdn.net/blog/ly_sr/6737353','');OutputLastNextArt('%e5%a4%9c%e9%97%b4%e5%b7%a5%e4%bd%9c%e6%9c%89%e5%ae%b3%e8%ba%ab%e4%bd%93%e5%81%a5%e5%ba%b7%e5%90%97%ef%bc%9f','http://www.360doc.com/content/14/0916/17/11409172_409969959.shtml',0);OutputLastNextArt('%3cspan+style%3d%22color%3a%23b0b0b0%3b%22%3e%5b%e8%bd%ac%5d%26nbsp%3b%3c%2fspan%3e%e4%bb%80%e4%b9%88%e6%a0%b7%e7%9a%84%e4%ba%ba%e5%ae%b9%e6%98%93%e9%81%87%e5%88%b0%e8%b4%b5%e4%ba%ba%ef%bc%9f','http://www.360doc.com/content/14/0920/00/9428521_410830938.shtml',1);</script>
+<script type="text/javascript" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/newheader.js"></script>
+<script type="text/javascript" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/addStatistics.js"></script>
+<script src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/getstatusv2.txt" type="text/javascript" charset="utf-8" async="async"></script>
+<script type="text/javascript">
+        var baiduImagePlus = {
+            noLogo: true,
+            unionId: 'u2617463',
+            maxMiniAdCount: 0,
+            formList: [{ formId: 10 }]
+        };
+    </script>
+<script type="text/javascript" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/i.js"></script>
+
+
+<iframe style="display: none;" src="%E7%BB%99%E8%8F%9C%E9%B8%9F%E7%9C%8B%E7%9A%84Android%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E5%85%A8%E6%B5%81%E7%A8%8B%20-%20CSDN%E5%8D%9A%E5%AE%A2_files/cookie_iframe.htm"></iframe><div style="position: absolute; border: 0px none; margin: 0px; padding: 0px; height: 0px; overflow: visible; text-align: left; z-index: 999; top: 6304px; left: 138px; width: 405px;" baidu_imageplus_sensitive_judge="true"><style type="text/css" media="screen">.baiduimageplus-yuetu-box{position:fixed;width:100%;height:100%;top:0;left:0;bottom:0;right:0;font-family:'Microsoft YaHei';line-height:normal;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;display:none;z-index:2147483647}.yuetu-float-layer-arrow{float:none;margin:0;padding:0;border:0;overflow:hidden;position:static;display:block;visibility:visible;text-align:left;background:transparent;-webkit-box-sizing:content-box;box-sizing:content-box;position:absolute;height:70px;width:40px;top:0;left:0;background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full.png);_background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_png8.png);background-repeat:no-repeat;background-position:-2px -124px;z-index:888}.yuetu-float-layer-arrow:hover{background-position:-44px -124px;cursor:pointer}
+.yuetu-float-layer-arrow:active{background-position:-86px -124px;cursor:pointer}.yuetu-float-layer-salon{float:none;margin:0;padding:0;border:0;overflow:hidden;position:static;display:block;visibility:visible;text-align:left;background:transparent;position:fixed;top:0;left:0;bottom:0;right:0;filter:progid:dximagetransform.microsoft.gradient(startColorstr='#661F1F1F',endColorstr='#661F1F1F');background-color:rgba(31,31,31,0.4);font-family:Microsoft YaHei;z-index:2147483647;line-height:normal;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box}.yuetu-float-layer-salon div{float:none;margin:0;padding:0;border:0;overflow:hidden;position:static;display:block;visibility:visible;text-align:left;background:transparent;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Microsoft YaHei;line-height:normal}
+.yuetu-float-layer-salon a,.yuetu-float-layer-salon img,.yuetu-float-layer-salon span{float:none;margin:0;padding:0;border:0;overflow:visible;position:static;display:inline;visibility:visible;text-align:left;background:transparent;-webkit-box-sizing:content-box;box-sizing:content-box;font-family:Microsoft YaHei;line-height:normal}.yuetu-float-layer-salon .yfls-container{position:fixed;height:600px;width:1080px;top:0;left:0;background-color:#fff}.yuetu-float-layer-salon .yfls-container .yfls-hr{width:100%;height:1px;position:absolute;background-color:#e0e0e0;z-index:3;display:none}.yuetu-float-layer-salon .yfls-container .yfls-hr-header{top:43px;left:0}.yuetu-float-layer-salon .yfls-container .yfls-hr-footer{left:0;bottom:40px}.yuetu-float-layer-salon .yfls-container .yfls-bodyer{position:absolute;top:0;left:0;background-color:white;z-index:2}
+.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-title{position:absolute;top:15px;left:15px;height:20px;width:960px;font-size:16px;color:#434343;font-weight:bold}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-title .yfls-img-num-idx{color:#e30a20;font-weight:bolder}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-title .yfls-img-title-text strong{font-weight:normal}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer{position:absolute;top:50px;left:0;border-right:1px solid #e0e0e0;-moz-user-select:none;-webkit-user-select:none;user-select:none}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgup-btn{position:absolute;height:100px;width:50px;top:225px;left:0;background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);_background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);background-position:-116px -90px;background-repeat:no-repeat;-moz-user-select:none;-webkit-user-select:none;user-select:none}
+.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgup-btn:hover{background-position:-174px -90px;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgdn-btn{position:absolute;height:100px;width:50px;top:225px;right:0;background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);_background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);background-position:-56px -90px;background-repeat:no-repeat;-moz-user-select:none;-webkit-user-select:none;user-select:none}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgdn-btn:hover{background-position:2px -90px;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-bodyer-img-hide{display:none}
+.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer>img:hover{cursor:url(http://ecmb.bdimg.com/public03/yuetu_left_cur_0715.cur),auto}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-img-wrapper{position:absolute;z-index:1;left:60px;overflow:hidden}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-img-wrapper .yfls-img-item-iframe{position:relative;left:0}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-img-wrapper .yfls-img-item-img,.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-img-wrapper .yfls-img-item-realIframe{float:left}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgup-arrow{position:absolute;z-index:3;background-color:#000;filter:alpha(opacity=0);background-color:rgba(0,0,0,0)}
+.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgup-arrow:hover{cursor:url(http://ecmb.bdimg.com/public03/yuetu_left_cur_0715.cur),auto}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgdn-arrow{position:absolute;z-index:3;background-color:#000;filter:alpha(opacity=0);background-color:rgba(0,0,0,0)}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-bodyer .yfls-pgdn-arrow:hover{cursor:url(http://ecmb.bdimg.com/public03/yuetu_right_cur_0715.cur),auto}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-footer{font-size:11px;color:#c9c9c9;position:absolute;width:80%;width:inherit;bottom:15px;text-align:right}.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-footer .yfls-img-footer-url{margin-right:5%}
+.yuetu-float-layer-salon .yfls-container .yfls-bodyer .yfls-img-footer .yfls-img-footer-url a{text-decoration:none;color:#c9c9c9!important;color:inherit}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer{background-color:white;z-index:1;position:absolute}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-fast-click-shell{position:absolute;z-index:1;background-color:#000;filter:alpha(opacity=0);background-color:rgba(0,0,0,0)}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title{position:absolute;top:15px;left:50px;height:30px;font-size:14px;border-bottom:8px #f64c4c solid}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title .yfls-tail-title-hot-recommend{font-size:20px;font-weight:bold;color:#515151}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title-re{position:absolute;top:0;right:52px;width:145px;height:50px;z-index:2;background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);background-repeat:no-repeat;background-position:-155px -200px}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title-re:hover{background-position:0 -200px;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer{position:absolute;top:55px;left:35px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item{position:absolute;height:256px;width:200px;background-color:#FFF;border:2px solid #e5e5e5;box-sizing:content-box;-moz-box-sizing:content-box;-webkit-box-sizing:content-box}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item:hover{border:2px solid #f64c4c}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item img{height:200px;width:200px;border:0}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-flash-a{position:absolute;height:200px;width:200px;top:0;left:0;opacity:0;filter:alpha(opacity=0);background:#FFF;overflow:hidden}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-title{white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;margin-top:4px;text-align:center}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-title .yfls-ad-item-title-a{text-decoration:none;color:#000;font-size:16px;font-weight:bold}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-title .yfls-ad-item-title-a:hover{color:#f64c4c}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-url{white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden;margin-top:2px;text-align:center}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-url .yfls-ad-item-url-a{text-decoration:none;color:#868686;font-size:12px;font-weight:bold}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer .yfls-ad-item .yfls-ad-item-url .yfls-ad-item-url-a:hover{text-decoration:underline}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer{position:absolute;left:0;bottom:0}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-native-title{height:35px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-native-title>div{position:absolute;left:50px;top:0;font-size:18px;color:#515151;font-weight:bold}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-native-replace{background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);background-position:0 -60px;background-repeat:no-repeat;width:110px;height:25px;position:absolute;top:0;right:35px}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-native-replace:hover{cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad{position:absolute;left:0;bottom:0;height:135px;overflow:visible}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container{position:absolute;left:35px;right:35px;top:0;height:135px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item{position:absolute;height:135px;width:148px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img{width:144px;height:104px;border:2px solid #e5e5e5;cursor:pointer}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img:hover{border:2px solid #f64c4c}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img:hover .yfls-tail-ad-item-img-hover{text-decoration:none;display:block;position:absolute;top:2px;left:2px;width:144px;height:104px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img .yfls-tail-ad-item-img-hover{display:none;position:absolute;top:2px;left:2px;width:144px;height:104px;background-color:rgba(246,76,76,0.85);filter:progid:dximagetransform.microsoft.gradient(startColorstr='#D9F64C4C',endColorstr='#D9F64C4C');cursor:pointer}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img .yfls-tail-ad-item-img-hover>div{position:absolute;top:35px;left:19px;height:30px;width:102px;border:2px solid #fff;font-weight:bold;line-height:30px;text-align:center;color:#fff}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info{text-align:center;font-size:12px;color:#333;margin-top:4px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info a{color:#333;text-decoration:none;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info a:hover{color:#f64c4c}
+.yuetu-float-layer-salon .yfls-container .yfls-logo{position:absolute;right:0;bottom:0;margin:0 2px 2px 0;height:14px;width:13px;background:url(http://ecmb.bdimg.com/public03/yuetu_logo.png) no-repeat left top;background-position:0 -20px;z-index:3}.yuetu-float-layer-salon .yfls-container .yfls-logo:hover{background-position:0 -35px}.yuetu-float-layer-salon .yfls-container .imageplus-ad-logo{background:url(http://ecma.bdimg.com/public03/imageplus/logo.png) no-repeat;background-position:0 0;width:34px;height:16px;position:absolute;left:0;bottom:0;z-index:1}.yuetu-float-layer-salon .yfls-container .imageplus-paw-logo{background:url(http://ecma.bdimg.com/public03/imageplus/logo.png) no-repeat;background-position:0 -17px;width:16px;height:16px;position:absolute;right:0;bottom:0;z-index:1}.yuetu-float-layer-salon .yfls-container .yfls-close-btn{position:absolute;top:0;right:0;height:50px;width:50px;z-index:3;background-image:url(http://ecmb.bdimg.com/public03/yuetu_btn_full_0715.png);background-repeat:no-repeat;background-position:0 0}
+.yuetu-float-layer-salon .yfls-container .yfls-close-btn:hover{background-position:-60px 0;cursor:pointer}.yuetu-float-layer-salon-hide{height:0}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-gx-bodyer-yuansheng{display:none}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title-re-pv{position:absolute;top:0;right:162px;width:50px;height:50px;z-index:2;background-image:url(http://ecmb.bdimg.com/public03/yuetu_close_btn_pv_1015.png);background-repeat:no-repeat;background-position:0 -44px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-title-re-pv:hover{background-position:0 -97px;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng{position:absolute;left:0;bottom:0;top:53px;right:0}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-native-replace{display:none}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad{position:absolute;left:0;top:0;overflow:visible}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container{position:absolute;left:0;right:0;top:0;overflow:visible}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item{position:absolute;height:180px;width:210px}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-img{width:206px;height:146px;border:2px solid #e5e5e5;cursor:pointer}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info{text-align:center;font-size:18px;color:#333;padding:2px;border:2px solid #e5e5e5;border-top:0}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info a{color:#333;text-decoration:none;cursor:pointer}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item .yfls-tail-ad-item-info a:hover{color:#f64c4c}.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item:hover .yfls-tail-ad-item-img,.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item:hover .yfls-tail-ad-item-info{border-color:#f64c4c}
+.yuetu-float-layer-salon .yfls-container .yfls-tail-bodyer .yfls-tail-native-bodyer-yuansheng .yfls-tail-ad .yfls-tail-ad-container .yfls-tail-ad-item:hover .yfls-tail-ad-item-img{border-bottom:2px solid #e5e5e5}.yuetu-float-layer-salon .yfls-container .yfls-close-btn-pv{position:absolute;top:0;right:0;height:50px;width:160px;z-index:3;background-image:url(http://ecmb.bdimg.com/public03/yuetu_close_btn_pv_1015.png);background-repeat:no-repeat;background-position:-51px -44px}.yuetu-float-layer-salon .yfls-container .yfls-close-btn-pv:hover{background-position:-51px -97px;cursor:pointer}</style><div id="f21ac82b21eeb7322631b6aa94e17f45156cabr" style="margin: 0px; padding: 0px; border: medium none; overflow: visible; text-align: left;"><div class="yuetu-float-layer yuetu-float-layer-arrow" style="height: 70px; width: 40px; top: 235px; left: 363px; position: absolute;" id="w-xy779u"></div><div class="baiduimageplus-yuetu-box" id="w-mb7qps-baiduimageplus-yuetu-box" style="height: 667px; width: 1263px;">
+<div id="w-mb7qps-widget-isolated-host" style="width:100%;height:100%;overflow:hidden;box-sizing:content-box;position:static;display:block;padding:0;margin:0;border:none;"><iframe allowtransparency="true" scrolling="no" vspace="0" hspace="0" style="width:100%;height:100%;position:static;display:block;padding:0;margin:0;border:none;vertical-align:baseline;" frameborder="0"></iframe></div>
+</div></div></div><div id="goTop2" style="left: 1159.5px;"><div id="goTop"><a href="#" id="go_top" onclick="artStatistics('20-20');"></a></div><div id="goTop1"><a href="javascript:void(0);" id="go_top1"></a></div><div></div></div></body></html>

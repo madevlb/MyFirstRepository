@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	body{margin:0;padding:0;font-size:12px;font-family:Arial;background:transparent;width:100%;height:100%;}
+	img{border:0;}
+	.container{width:100%;height:100%;position:absolute;overflow:hidden;left:50%;top:50%;background:#fff;}
+	.disp{width:100%;height:100%;position:absolute;left:0px;top:0px;}
+</style></head>
+
+<body>
+<script type="text/javascript">
+<!--
+
+function _getTrueSize(_w1,_h1,_w2,_h2,_isCut){
+	var _scale1=_w1/_h1
+		,_scale2=_w2/_h2
+		,_tw=_w2
+		,_th=_h2
+	if(_scale1>_scale2){
+		if(!_isCut){
+			if(_h2>_h1){
+				_th=_h1;
+				_tw=Math.round(_h1*_scale2);
+			}else{
+				_th=_h2;
+				_tw=Math.round(_h2*_scale2);
+			}
+		}else{
+			if( _w2>_w1){
+				_tw=_w1;
+				_th=Math.round(_w1/_scale2);
+			}else{
+				_tw=_w2;
+				_th=Math.round(_w2/_scale2);
+			}
+		}
+	}
+	if(_scale1<=_scale2){
+		if(!_isCut){
+			if( _w2>_w1){
+				_tw=_w1;
+				_th=Math.round(_w1/_scale2);
+			}else{
+				_tw=_w2;
+				_th=Math.round(_w2/_scale2);
+			}
+		}else{
+			if(_h2>_h1){
+				_th=_h1;
+				_tw=Math.round(_h1*_scale2);
+			}else{
+				_th=_h2;
+				_tw=Math.round(_h2*_scale2);
+			}
+		}
+	}
+	return [_tw,_th];
+}
+var _mSize=_getTrueSize(parent.__init.w,parent.__init.h,parent.__init.resizeInfo.w,parent.__init.resizeInfo.h);
+document.write('<div class="container" style="width:'+_mSize[0]+'px;height:'+_mSize[1]+'px;margin-left:-'+parseInt(_mSize[0]/2)+'px;margin-top:-'+parseInt(_mSize[1]/2)+'px"><zpshow class="disp" titlemark="1"></zpshow></div>');
+
+//-->
+</script><div class="container" style="width:300px;height:250px;margin-left:-150px;margin-top:-125px"><a href="http://ut.gtags.net/tms/c3?p=23&amp;mk=uo3kWdRRjt_wmjKKgSOMBCRJ1DqdEB9e_KSquNGUI8m44Ti2q_fp1g35w1ekZwh0gEqfvFEuAGjlQhm8KMQwNR6WHidKms-ZYoxCCctcxrbLd2R7meM5gw32rOM4Ly2Cgo4E_knqXYYWNCSN0l5eFOASNdzH3rl25tvgYJzTiquBKgVHR3WlSwVxv9CBmTTH5D2glKuF9IarW-Tb9QfaT2vD4f3cQ-6U5cMuiV1sh68E2vZ4M9uXMp_7POgqzSedCeU58c6fqIANA8ne1thsW0-6bq5HNH9U4vBJh7E-p9pbNM0vlFDTvdCoK9zSVf7-oXxD6eayGMhrSqIimfCy94s8_AEqppMe7-hyB-PXd3DrJgTmuZY3zAdwUZEaDiClEUdXBePegy22pqZwKthqGBNWOREF6ZH2n66n3sK2aVf5K6F8J6_En8buxqHVJLEp0JJzUkkvTOE&amp;t=2&amp;mat=1303513361631239846&amp;url=http%3A%2F%2Fevent.uzai.com%2Fsubject%2Fbjrben%2Fxrb.htm%3Fzamp%26xk%26pc%26rb%26utm_source%3Dzamp%252Dbj%26utm_medium%3Dcpc%26utm_channel%3Dzamp%252Djz%252Dxk%252Dpc%252Drb%252Dbj%26utm_content%3D0630zamp%252Djz%252Dxk%252Dpc%252Drb%252Dbj" target="_blank"><img src="static_2_data/1303513361631239846_d_300_250_811213074.jpg" class="disp" titlemark="1"></a></div>
+<script type="text/javascript">
+<!--
+parent.__start();
+//-->
+</script>
+
+
+</body></html>
